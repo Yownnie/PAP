@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://bg71cvnjusko1"]
+
+[ext_resource type="Script" uid="uid://daripwmh5emdx" path="res://world.gd" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://d0fetojg1qgvn" path="res://player.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://c6jk5girn7ex4" path="res://levelcompleted.tscn" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://b52gcxjqcnlli" path="res://level_tile_map.tscn" id="6_dwbse"]
+
+[sub_resource type="Animation" id="Animation_aqk2v"]
+resource_name = "Countdown"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer/StartInlable:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["inicia em: 3", "inicia em: 2
+", "inicia em: 1
+"]
+}
+
+[sub_resource type="Animation" id="Animation_036b0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer/StartInlable:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["inicia em: 3"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dwbse"]
+_data = {
+&"Countdown": SubResource("Animation_aqk2v"),
+&"RESET": SubResource("Animation_036b0")
+}
+
+[node name="World" type="Node2D"]
+position = Vector2(-2, 0)
+script = ExtResource("1_f3sb7")
+
+[node name="player" parent="." instance=ExtResource("2_fj7yv")]
+position = Vector2(2, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Levelcompleted" parent="CanvasLayer" instance=ExtResource("5_036b0")]
+visible = false
+
+[node name="StartIn" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.290196)
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/StartIn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartInlable" type="Label" parent="CanvasLayer/StartIn/CenterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "inicia em: 3"
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 2.0
+offset_bottom = 10.0
+grow_horizontal = 2
+
+[node name="Leveltimelabel" type="Label" parent="CanvasLayer/CenterContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+vertical_alignment = 1
+
+[node name="LevelTileMap" parent="." instance=ExtResource("6_dwbse")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_dwbse")
+}
+autoplay = "Countdown"
+
+[connection signal="next_level" from="CanvasLayer/Levelcompleted" to="." method="_on_levelcompleted_next_level"]
+[connection signal="retry" from="CanvasLayer/Levelcompleted" to="." method="_on_levelcompleted_retry"]
