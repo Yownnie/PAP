@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyyfa2g0trh0y"]
+
+[ext_resource type="PackedScene" uid="uid://bg71cvnjusko1" path="res://world.tscn" id="1_pgewh"]
+[ext_resource type="PackedScene" uid="uid://c16hhrlcap6vp" path="res://spikes.tscn" id="2_g0ngd"]
+[ext_resource type="PackedScene" uid="uid://s7y4nkwd3tcu" path="res://level_one.tscn" id="2_lfs58"]
+[ext_resource type="PackedScene" uid="uid://bxc8jwgja100q" path="res://star.tscn" id="3_hxiwh"]
+
+[node name="Level_two" instance=ExtResource("1_pgewh")]
+next_level = ExtResource("2_lfs58")
+
+[node name="LevelTileMap" parent="." index="2"]
+layer_0/tile_data = PackedInt32Array(1, 65536, 3, 0, 65536, 3, 65535, 65536, 3, 65534, 65536, 3, 65533, 65536, 3, 65532, 262144, 3, -4, 196608, 1, -65540, 196608, 1, -131076, 196608, 1, -196612, 196608, 1, 2, 65536, 3, 3, 65536, 3, 4, 65536, 3, 5, 65536, 3, -262148, 196608, 1, -327684, 196608, 1, -393220, 196608, 1, -458756, 196608, 1, -524292, 196608, 1, -589828, 196608, 1, -196604, 0, 3, -196603, 131072, 3, 6, 65536, 3, 7, 65536, 3, 8, 65536, 3, 9, 65536, 3, 10, 65536, 3, 11, 458752, 3, -65525, 196608, 1, -131061, 196608, 1, -196597, 196608, 1, -262133, 196608, 1, -327669, 262144, 0, -327668, 65536, 3, -327667, 65536, 3, -327666, 65536, 3, -327665, 65536, 3, -327664, 65536, 3, -720888, 65536, 3, -720889, 65536, 3, -720890, 65536, 3, -720891, 65536, 3, -720892, 65536, 3, -720893, 65536, 3, -720894, 65536, 3, -720895, 65536, 3, -720896, 327680, 3, -655361, 65536, 2, -655362, 65536, 2, -655363, 65536, 2, -655364, 262144, 1, -720887, 65536, 3, -720886, 65536, 3, -720885, 65536, 3, -327663, 65536, 3, -327662, 65536, 3, -327661, 65536, 3, -524271, 131072, 3, -524272, 0, 3, -327660, 65536, 3, -327659, 65536, 3, -327658, 458752, 3, -393194, 196608, 1, -458730, 196608, 1, -524266, 196608, 1, -589802, 196608, 1, -655338, 196608, 1, -720874, 196608, 1, -786410, 196608, 1, -851946, 196608, 1, -917482, 196608, 1, -917489, 131072, 3, -917490, 65536, 3, -917491, 0, 3, -720884, 65536, 3, -720883, 65536, 3, -720882, 131072, 3, -983018, 196608, 1, -1048554, 196608, 1, -1114090, 458752, 4, -1179626, 196608, 1, -1245162, 196608, 1, -983033, 196608, 3, -786432, 131072, 0, -720897, 65536, 0, -720898, 65536, 0, -720899, 65536, 0, -720900, 262144, 2, -786436, 196608, 1, -851972, 196608, 1, -917508, 196608, 1, -983044, 196608, 1, -1048580, 196608, 1, -1114116, 196608, 1, -1179652, 196608, 1, -1245188, 196608, 1, -1310724, 196608, 1, -1376234, 196608, 1, -1310698, 196608, 1, -1441770, 196608, 1, -1507306, 196608, 1, -1572842, 196608, 1, -1638378, 458752, 0, -1638379, 65536, 3, -1638380, 65536, 3, -1638381, 65536, 3, -1638382, 65536, 3, -1638383, 262144, 0, -1572847, 196608, 1, -1507311, 458752, 3, -1507312, 65536, 3, -1507313, 65536, 3, -1507314, 65536, 3, -1507315, 65536, 3, -1507316, 65536, 3, -1507317, 65536, 3, -1507318, 65536, 3, -1507319, 65536, 3, -1507320, 65536, 3, -1507321, 65536, 3, -1507322, 65536, 3, -1507323, 65536, 3, -1507324, 65536, 3, -1507325, 65536, 3, -1507326, 262144, 3, -1572862, 196608, 1, -1638398, 458752, 0, -1638399, 65536, 3, -1638400, 65536, 3, -1572865, 65536, 3, -1572866, 65536, 3, -1572867, 65536, 3, -1572868, 262144, 0, -1507332, 196608, 1, -1441796, 196608, 1, -1376260, 196608, 1, -1114091, 65536, 3, -1114092, 65536, 3, -1114093, 0, 3)
+
+[node name="StarSpawnPoints" type="Node2D" parent="." index="4"]
+
+[node name="Spawnpoint" type="Marker2D" parent="StarSpawnPoints" index="0"]
+position = Vector2(202, -96)
+
+[node name="Spawnpoint2" type="Marker2D" parent="StarSpawnPoints" index="1"]
+position = Vector2(-6, -208)
+
+[node name="Spawnpoint3" type="Marker2D" parent="StarSpawnPoints" index="2"]
+position = Vector2(234, -240)
+
+[node name="Spawnpoint4" type="Marker2D" parent="StarSpawnPoints" index="3"]
+position = Vector2(82, -56)
+
+[node name="Spawnpoint5" type="Marker2D" parent="StarSpawnPoints" index="4"]
+position = Vector2(298, -176)
+
+[node name="Spawnpoint6" type="Marker2D" parent="StarSpawnPoints" index="5"]
+position = Vector2(330, -288)
+
+[node name="Things" type="Node2D" parent="." index="5"]
+
+[node name="star" parent="Things" index="0" instance=ExtResource("3_hxiwh")]
+position = Vector2(82, -56)
+
+[node name="star2" parent="Things" index="1" instance=ExtResource("3_hxiwh")]
+position = Vector2(-6, -208)
+
+[node name="star3" parent="Things" index="2" instance=ExtResource("3_hxiwh")]
+position = Vector2(298, -176)
+
+[node name="spikes" parent="Things" index="3" instance=ExtResource("2_g0ngd")]
+position = Vector2(18, -176)
+
+[node name="spikes2" parent="Things" index="4" instance=ExtResource("2_g0ngd")]
+position = Vector2(34, -176)
+
+[node name="spikes3" parent="Things" index="5" instance=ExtResource("2_g0ngd")]
+position = Vector2(50, -176)
+
+[node name="spikes4" parent="Things" index="6" instance=ExtResource("2_g0ngd")]
+position = Vector2(66, -176)
+
+[node name="spikes5" parent="Things" index="7" instance=ExtResource("2_g0ngd")]
+position = Vector2(82, -176)
+
+[node name="spikes6" parent="Things" index="8" instance=ExtResource("2_g0ngd")]
+position = Vector2(98, -176)
+
+[node name="spikes7" parent="Things" index="9" instance=ExtResource("2_g0ngd")]
+position = Vector2(114, -176)
+
+[node name="spikes8" parent="Things" index="10" instance=ExtResource("2_g0ngd")]
+position = Vector2(130, -176)
+
+[node name="spikes9" parent="Things" index="11" instance=ExtResource("2_g0ngd")]
+position = Vector2(146, -176)
+
+[node name="spikes10" parent="Things" index="12" instance=ExtResource("2_g0ngd")]
+position = Vector2(162, 0)
+
+[node name="spikes11" parent="Things" index="13" instance=ExtResource("2_g0ngd")]
+position = Vector2(146, 0)
+
+[node name="spikes12" parent="Things" index="14" instance=ExtResource("2_g0ngd")]
+position = Vector2(338, -80)
+
+[node name="spikes13" parent="Things" index="15" instance=ExtResource("2_g0ngd")]
+position = Vector2(322, -80)
+
+[node name="spikes14" parent="Things" index="16" instance=ExtResource("2_g0ngd")]
+position = Vector2(130, 0)

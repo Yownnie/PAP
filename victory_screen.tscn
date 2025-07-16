@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0ivsbpv73uxo"]
+
+[ext_resource type="Script" uid="uid://dw6l7n8aagyad" path="res://victory_screen.gd" id="1_rbj82"]
+
+[node name="victoryScreen" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rbj82")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Jogo Completo!"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 16)
+layout_mode = 2
+text = "Volte para o menu principal"
+
+[connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]

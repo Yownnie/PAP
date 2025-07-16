@@ -1,0 +1,192 @@
+[gd_scene load_steps=6 format=3 uid="uid://ihvko3ard1k1"]
+
+[ext_resource type="PackedScene" uid="uid://bg71cvnjusko1" path="res://world.tscn" id="1_jl26d"]
+[ext_resource type="Theme" uid="uid://bsbqp1uba6ria" path="res://DefaultTheme.tres" id="2_5s8la"]
+[ext_resource type="PackedScene" uid="uid://dyyfa2g0trh0y" path="res://level_two.tscn" id="2_p3v23"]
+[ext_resource type="PackedScene" uid="uid://c16hhrlcap6vp" path="res://spikes.tscn" id="3_fr6qw"]
+[ext_resource type="PackedScene" uid="uid://bxc8jwgja100q" path="res://star.tscn" id="4_oiqhk"]
+
+[node name="World" instance=ExtResource("1_jl26d")]
+next_level = ExtResource("2_p3v23")
+
+[node name="player" parent="." index="0"]
+position = Vector2(-950, 0)
+
+[node name="LevelTileMap" parent="." index="2"]
+position = Vector2(4, 0)
+layer_0/tile_data = PackedInt32Array(65526, 65536, 3, 65527, 65536, 3, 65529, 65536, 3, 65528, 65536, 3, 65530, 65536, 3, 65531, 65536, 3, 65532, 65536, 3, 65533, 393216, 3, 65534, 65536, 2, 65535, 327680, 3, 0, 65536, 3, 1, 65536, 3, 2, 65536, 3, 3, 65536, 3, 4, 65536, 3, 5, 65536, 3, 6, 65536, 3, 7, 65536, 3, 8, 65536, 3, 9, 65536, 3, 10, 65536, 3, 11, 65536, 3, 12, 65536, 3, 13, 65536, 3, 14, 65536, 3, 15, 65536, 3, 16, 65536, 3, 17, 65536, 3, 18, 65536, 3, 19, 393216, 3, 20, 327680, 3, 21, 65536, 3, 22, 65536, 3, 23, 65536, 3, 24, 65536, 3, -1, 131072, 1, -2, 393216, 2, -65538, 65536, 0, -65537, 131072, 0, -3, 0, 0, -65517, 0, 1, -131053, 0, 0, -131052, 131072, 0, -65516, 131072, 1, -393197, 0, 2, -393196, 131072, 2, -458732, 131072, 1, -524268, 131072, 1, -589804, 131072, 1, -655340, 131072, 1, -720876, 131072, 1, -786412, 131072, 1, -720877, 0, 1, -655341, 0, 1, -589805, 0, 1, -524269, 0, 1, -458733, 0, 1, -786413, 0, 1, -851949, 0, 1, -917485, 0, 0, -917484, 131072, 0, -851948, 131072, 1, 65524, 65536, 3, 65525, 65536, 3, 65523, 65536, 3, 65522, 65536, 3, 65521, 65536, 3, 65520, 65536, 3, 65519, 65536, 3, 65518, 65536, 3, 65517, 65536, 3, 65516, 65536, 3, 65515, 65536, 3, 65514, 65536, 3, 65513, 65536, 3, 65512, 65536, 3, 65511, 65536, 3, -262140, 65536, 3, -458740, 0, 3, -458739, 65536, 3, -458738, 131072, 3, 65510, 65536, 3, 65499, 65536, 3, 65506, 65536, 3, 65507, 65536, 3, 65508, 65536, 3, 65509, 65536, 3, 65498, 327680, 3, 65497, 393216, 3, 65496, 65536, 3, 65495, 65536, 3, 65494, 65536, 3, 65493, 65536, 3, 65492, 65536, 3, 65491, 65536, 3, 65500, 65536, 3, 65503, 65536, 3, 65502, 65536, 3, 65501, 65536, 3, 65504, 65536, 3, 65505, 65536, 3, 65490, 65536, 3, 65489, 65536, 3, 65488, 65536, 3, 65487, 65536, 3, 65486, 65536, 3, 65485, 65536, 3, 65484, 65536, 3, 65483, 65536, 3, 65482, 65536, 3, 65481, 65536, 3, 65480, 65536, 3, 65479, 65536, 3, 65478, 65536, 3, -131110, 131072, 0, -65574, 131072, 1, -38, 131072, 1, -131111, 0, 0, -65575, 0, 1, -39, 0, 1, 65477, 65536, 3, 65476, 65536, 3, 65475, 65536, 3, 65474, 65536, 3, 65473, 65536, 3, 65472, 65536, 3, 65471, 327680, 3, -65, 131072, 1, -65601, 131072, 1, -131137, 131072, 1, -196673, 131072, 1, -262209, 131072, 1, -327745, 131072, 1, -393281, 131072, 1, -458817, 131072, 1, -524353, 131072, 1, -589889, 327680, 1, -655425, 65536, 1, -720961, 65536, 1, -786497, 65536, 0, -786498, 0, 0, -655426, 0, 1, -720962, 0, 1, -589890, 0, 1, -524354, 0, 1, -458818, 0, 1, -327746, 0, 1, -393282, 0, 1, -262210, 0, 1, -196674, 0, 1, -131138, 0, 1, -65602, 0, 1, -66, 0, 1, 65470, 0, 2, -786496, 65536, 0, -786495, 65536, 0, -786494, 327680, 0, -786493, 131072, 3, -720959, 327680, 1, -720958, 131072, 2, -720960, 65536, 1, -655424, 327680, 1, -655423, 131072, 2, -589888, 131072, 2, -262141, 0, 3, -262139, 131072, 3, 25, 65536, 3, 26, 65536, 3, 27, 65536, 3, 28, 65536, 3, 29, 65536, 3, 30, 65536, 3, 31, 65536, 3, 32, 65536, 3, 33, 65536, 3, 34, 393216, 3, 35, 65536, 2, 36, 131072, 2, -196579, 0, 2, -196578, 131072, 2, -65502, 0, 1, -65501, 65536, 1, -65500, 131072, 1, -131036, 131072, 1, -196572, 131072, 1, -196573, 65536, 1, -131037, 65536, 1, -131038, 0, 1, -262109, 65536, 1, -327645, 65536, 1, -393181, 65536, 1, -458717, 65536, 1, -524253, 65536, 1, -589789, 65536, 0, -589790, 0, 0, -524254, 0, 1, -458718, 0, 1, -393182, 0, 1, -327646, 0, 1, -262110, 0, 1, -196574, 0, 1, -262108, 131072, 1, -327644, 131072, 1, -393180, 131072, 1, -458716, 131072, 1, -524252, 131072, 1, -589788, 131072, 0, -262114, 131072, 1, -393186, 131072, 1, -327650, 131072, 1, -458722, 131072, 1, -524258, 131072, 1, -589794, 131072, 1, -655330, 131072, 1, -720866, 131072, 0, -720867, 0, 0, -655331, 0, 1, -589795, 0, 1, -524259, 0, 1, -458723, 0, 1, -393187, 0, 1, -327651, 0, 1, -262115, 0, 1)
+layer_1/tile_data = PackedInt32Array(-4, 1, 0, -65539, 1, 0, -65538, 0, 0, -2, 0, 2, 65533, 131072, 3, 65532, 327680, 3)
+
+[node name="Entidades" type="Node2D" parent="." index="4"]
+
+[node name="spikes" parent="Entidades" index="0" instance=ExtResource("3_fr6qw")]
+position = Vector2(-446, 0)
+
+[node name="spikes2" parent="Entidades" index="1" instance=ExtResource("3_fr6qw")]
+position = Vector2(-358, 0)
+
+[node name="spikes3" parent="Entidades" index="2" instance=ExtResource("3_fr6qw")]
+position = Vector2(-342, 0)
+
+[node name="spikes4" parent="Entidades" index="3" instance=ExtResource("3_fr6qw")]
+position = Vector2(-286, 0)
+
+[node name="spikes5" parent="Entidades" index="4" instance=ExtResource("3_fr6qw")]
+position = Vector2(2, 0)
+
+[node name="spikes6" parent="Entidades" index="5" instance=ExtResource("3_fr6qw")]
+position = Vector2(18, 0)
+
+[node name="spikes7" parent="Entidades" index="6" instance=ExtResource("3_fr6qw")]
+position = Vector2(34, 0)
+
+[node name="spikes8" parent="Entidades" index="7" instance=ExtResource("3_fr6qw")]
+position = Vector2(50, 0)
+
+[node name="spikes9" parent="Entidades" index="8" instance=ExtResource("3_fr6qw")]
+position = Vector2(66, 0)
+
+[node name="spikes10" parent="Entidades" index="9" instance=ExtResource("3_fr6qw")]
+position = Vector2(82, 0)
+
+[node name="spikes11" parent="Entidades" index="10" instance=ExtResource("3_fr6qw")]
+position = Vector2(98, 0)
+
+[node name="spikes12" parent="Entidades" index="11" instance=ExtResource("3_fr6qw")]
+position = Vector2(114, 0)
+
+[node name="spikes13" parent="Entidades" index="12" instance=ExtResource("3_fr6qw")]
+position = Vector2(146, 0)
+
+[node name="spikes14" parent="Entidades" index="13" instance=ExtResource("3_fr6qw")]
+position = Vector2(178, 0)
+
+[node name="spikes15" parent="Entidades" index="14" instance=ExtResource("3_fr6qw")]
+position = Vector2(162, 0)
+
+[node name="spikes16" parent="Entidades" index="15" instance=ExtResource("3_fr6qw")]
+position = Vector2(130, 0)
+
+[node name="spikes17" parent="Entidades" index="16" instance=ExtResource("3_fr6qw")]
+position = Vector2(274, 0)
+
+[node name="spikes18" parent="Entidades" index="17" instance=ExtResource("3_fr6qw")]
+position = Vector2(242, 0)
+
+[node name="spikes19" parent="Entidades" index="18" instance=ExtResource("3_fr6qw")]
+position = Vector2(290, 0)
+
+[node name="spikes20" parent="Entidades" index="19" instance=ExtResource("3_fr6qw")]
+position = Vector2(258, 0)
+
+[node name="spikes21" parent="Entidades" index="20" instance=ExtResource("3_fr6qw")]
+position = Vector2(210, 0)
+
+[node name="spikes22" parent="Entidades" index="21" instance=ExtResource("3_fr6qw")]
+position = Vector2(226, 0)
+
+[node name="spikes23" parent="Entidades" index="22" instance=ExtResource("3_fr6qw")]
+position = Vector2(194, 0)
+
+[node name="StarSpawnPoints" type="Node2D" parent="." index="5"]
+
+[node name="Spawnpoint" type="Marker2D" parent="StarSpawnPoints" index="0"]
+position = Vector2(-302, -24)
+
+[node name="Spawnpoint2" type="Marker2D" parent="StarSpawnPoints" index="1"]
+position = Vector2(-166, -8)
+
+[node name="Spawnpoint3" type="Marker2D" parent="StarSpawnPoints" index="2"]
+position = Vector2(82, -88)
+
+[node name="Spawnpoint4" type="Marker2D" parent="StarSpawnPoints" index="3"]
+position = Vector2(322, -56)
+
+[node name="Spawnpoint5" type="Marker2D" parent="StarSpawnPoints" index="4"]
+position = Vector2(578, -152)
+
+[node name="Stars" type="Node2D" parent="." index="6"]
+
+[node name="star3" parent="Stars" index="0" instance=ExtResource("4_oiqhk")]
+position = Vector2(82, -88)
+
+[node name="star5" parent="Stars" index="1" instance=ExtResource("4_oiqhk")]
+position = Vector2(578, -152)
+
+[node name="star4" parent="Stars" index="2" instance=ExtResource("4_oiqhk")]
+position = Vector2(322, -56)
+
+[node name="star" parent="Stars" index="3" instance=ExtResource("4_oiqhk")]
+position = Vector2(-302, -24)
+
+[node name="star2" parent="Stars" index="4" instance=ExtResource("4_oiqhk")]
+position = Vector2(-166, -8)
+
+[node name="Node" type="Node" parent="." index="7"]
+
+[node name="Label" type="Label" parent="Node" index="0"]
+offset_left = -984.0
+offset_top = -56.0
+offset_right = -893.0
+offset_bottom = -23.0
+theme = ExtResource("2_5s8la")
+theme_type_variation = &"TooltipLabel"
+text = "para movimentar
+ use as teclas 
+WASD ou as setas"
+
+[node name="Label2" type="Label" parent="Node" index="1"]
+offset_left = -704.0
+offset_top = -56.0
+offset_right = -613.0
+offset_bottom = -23.0
+theme = ExtResource("2_5s8la")
+theme_type_variation = &"TooltipLabel"
+theme_override_font_sizes/font_size = 6
+text = "precione w ou ↑ 
+  para pular"
+
+[node name="Label3" type="Label" parent="Node" index="2"]
+offset_left = -480.0
+offset_top = -56.0
+offset_right = -389.0
+offset_bottom = -23.0
+theme = ExtResource("2_5s8la")
+theme_type_variation = &"TooltipLabel"
+theme_override_font_sizes/font_size = 5
+text = "espinho são perigosos
+não encoste neles
+ para proseguir"
+
+[node name="Label4" type="Label" parent="Node" index="3"]
+offset_left = -200.0
+offset_top = -56.0
+offset_right = -67.0
+offset_bottom = -8.0
+theme_override_font_sizes/font_size = 6
+text = "O objetivo do jogo é
+apanhartodas as estrelas
+o mais rapido possivel 
+para competar cada nivel"
+
+[node name="Label5" type="Label" parent="Node" index="4"]
+offset_left = 88.0
+offset_top = -128.0
+offset_right = 185.0
+offset_bottom = -95.0
+text = "Para pulos mais distantes
+precione a tecla de pulo
+duas vezes seguidas para
+fazer o pulo duplo"
+
+[node name="Label6" type="Label" parent="Node" index="5"]
+offset_left = 344.0
+offset_top = -64.0
+offset_right = 484.0
+offset_bottom = -22.0
+theme_override_font_sizes/font_size = 5
+text = "para chegar ate o topo devera
+de pular contra uma parede e
+enquanto estiver no ar movimente-se
+para a outra parede precionando a
+pecla de movimento que for necessario"
